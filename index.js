@@ -1,7 +1,7 @@
 const inquirer = require('inquirer'); 
 const fs = require('fs')
 
-const questions = [
+const questions = inquirer.prompt([
     
     // TITLE OF PROJECT
     {
@@ -13,35 +13,35 @@ const questions = [
     {
         type: 'input' ,
         name: 'Description' , 
-        message: 'Please describe your project' ,
+        message: 'Please describe your project:' ,
     },
     {
-        type: 'input' ,
+        type: 'input' , 
         name: 'Motivation' , 
-        message: 'Describe the motivation for creating the project' ,
+        message: 'Describe the motivation for creating the project:' ,
     },
     {
         type: 'input' ,
         name: 'Purpose' , 
-        message: 'Describe why you built the project' ,
+        message: 'Describe why you built the project:' ,
     },
     {
         type: 'input' ,
         name: 'Knowledge' , 
-        message: 'Describe what you learn whilst building the project' ,
+        message: 'Describe what you learn whilst building the project:' ,
     },
     
       // INSTALLATION
     { 
         type: 'input' ,
         name: 'Installation' ,
-        message: 'Provide a description of how to get the development environment running'
+        message: 'Provide a description of how to get the development environment running:'
     },
     // USAGE
     { 
         type: 'input' ,
         name: 'Usage' ,
-        message: 'Provide instructions and examples of use including screenshots'
+        message: 'Provide instructions and examples of use including screenshots:'
     },
      // LICENSE
     { 
@@ -54,20 +54,19 @@ const questions = [
     { 
         type: 'input' ,
         name: 'Contributing' ,
-        message: 'Provide contributing guidelines ' ,
+        message: 'Provide contributing guidelines: ' ,
     },
      // TESTS
     { 
         type: 'input' ,
         name: 'Tests' ,
-        message: 'Provide examples on how to run tests ' ,
+        message: 'Provide examples on how to run tests: ' ,
     },
-
     // QUESTIONS
     { 
         type: 'input' ,
         name: 'username' ,
-        message: 'Please provide a link to your GitHub profile] ' ,
+        message: 'Please provide a link to your GitHub profile: ' ,
     },
 
     { 
@@ -75,10 +74,19 @@ const questions = [
         name: 'email' ,
         message: 'What is your email? ' ,
     },
+]);
 
-];
+// Needs to write to file 
+questions.then((data) => {
+    fs.writeFile('README.md', JSON.stringify(data, null, '\t'), (err) =>
+    err ? console.log(err) : console.log('README.md file created')
+    )
+}
+)
 
-inquirer.prompt(questions).then((answers) => {
-    console.log('\nREADME');
-    console.log(JSON.stringify(answers, null, ' '));
-});
+
+
+// inquirer.prompt(questions).then((answers) => {
+//     console.log('\nREADME');
+//     console.log(JSON.stringify(answers, null, ' '));
+// });
