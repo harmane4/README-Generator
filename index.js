@@ -1,8 +1,9 @@
 const inquirer = require('inquirer'); 
-const fs = require('fs')
+const fs = require('fs');
 
+// Prompt(questions, answers). 
+// Questions array containing question object
 inquirer.prompt([
-    
     // TITLE OF PROJECT
     {
         type: 'input' ,
@@ -48,7 +49,7 @@ inquirer.prompt([
         type: 'list' ,
         name: 'License' ,
         message: 'Chose license for README.md' ,
-        choices: ['MIT' , 'GNU GLPv3' , 'Apache License 2.0' , 'ISC License']
+        choices: ['MIT' , 'GLPv3', 'ISC']
     },
     // CONTRIBUTING
     { 
@@ -76,20 +77,23 @@ inquirer.prompt([
 ])
 
 // WRITE INFORMATION TO A FILE
+//.then(answers)
 .then(({projectTitle, Description, Motivation, Purpose, Knowledge, Installation, Usage, License, Contributing, Tests, username, email}) => {
-// DATA FOR README
 
+// DATA FOR README
 let readMeData = 
 
-`#Title Of Project ${projectTitle}
+`# ${projectTitle}
+![license](https://img.shields.io/badge/License-${License}-blue.svg)
 
-##Description 
+
+## Description 
 ${Description}
 ${Motivation}
 ${Purpose}
 ${Knowledge}
 
-##Table of Contents 
+## Table of Contents 
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -98,38 +102,33 @@ ${Knowledge}
 - [Tests](#tests)
 - [Questions](#questions)
 
-##Installation 
+## Installation 
 ${Installation}
 
-##Usage 
+## Usage 
 ${Usage}
 
-##License 
+## License 
 ${License}
 
-##Contributing 
+## Contributing 
 ${Contributing}
 
-##Tests 
+## Tests 
 ${Tests}
 
-#Questions 
-${username}
-${email}
+## Questions 
+If you have any questions and would like to reach me you can do so at ${username} or ${email}
 
-`
+`;
 
 fs.writeFile('README.md', readMeData, (err) => 
 err ? console.log(err) : console.log('README.md file created'))
 })
 
-// .catch(error => {
-//     if(error.isTtyError) {
-//         console.log("good")
-//     } else {
-//         console.log("bad")
-//     }
-// })
+.catch , (err) => 
+err ? console.error(err) : console.log('README.md file created')
+
 
 
 
