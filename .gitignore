@@ -1,4 +1,4 @@
 # no node modules 
-/node_modules 
+node_modules/ 
 # no DS_Store
-.DS_Store
+.DS_Store/
