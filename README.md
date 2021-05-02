@@ -1,12 +1,12 @@
 # test
-![license](https://img.shields.io/badge/License-GLPv3-blue.svg)
+![license](https://img.shields.io/badge/License-MIT-blue.svg)
 
 
 ## Description 
 test
-test
-test
-test
+test134
+test543
+tst
 
 ## Table of Contents 
 
@@ -21,17 +21,22 @@ test
 test
 
 ## Usage 
-test
+tete
 
 ## License 
-GLPv3
+MIT
+MIT - (https://opensource.org/licenses/MIT)
+GLPv3 - (https://www.gnu.org/licenses/gpl-3.0)
+ISC - (https://opensource.org/licenses/ISC)
+
+© Elise Harman 2021
 
 ## Contributing 
-test
+testtest
 
 ## Tests 
-test
+testtes
 
 ## Questions 
-If you have any questions and would like to reach me you can do so at test or test
+If you have any questions and would like to reach me you can do so at my test or 23
 

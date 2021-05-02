@@ -1,9 +1,10 @@
+// Packages needed for this application
 const inquirer = require('inquirer'); 
 const fs = require('fs');
 
 // Prompt(questions, answers). 
 // Questions array containing question object
-inquirer.prompt([
+const promiseThatResolvesToResponses = inquirer.prompt([
     // TITLE OF PROJECT
     {
         type: 'input' ,
@@ -76,12 +77,10 @@ inquirer.prompt([
     },
 ])
 
-// WRITE INFORMATION TO A FILE
-//.then(answers)
-.then(({projectTitle, Description, Motivation, Purpose, Knowledge, Installation, Usage, License, Contributing, Tests, username, email}) => {
+promiseThatResolvesToResponses.then(({projectTitle, Description, Motivation, Purpose, Knowledge, Installation, Usage, License, Contributing, Tests, username, email}) => {
 
-// DATA FOR README
-let readMeData = 
+// RESPONSE OBJECT
+let readMeResponses = 
 
 `# ${projectTitle}
 ![license](https://img.shields.io/badge/License-${License}-blue.svg)
@@ -110,6 +109,11 @@ ${Usage}
 
 ## License 
 ${License}
+MIT - (https://opensource.org/licenses/MIT)
+GLPv3 - (https://www.gnu.org/licenses/gpl-3.0)
+ISC - (https://opensource.org/licenses/ISC)
+
+© Elise Harman 2021
 
 ## Contributing 
 ${Contributing}
@@ -118,20 +122,15 @@ ${Contributing}
 ${Tests}
 
 ## Questions 
-If you have any questions and would like to reach me you can do so at ${username} or ${email}
+If you have any questions and would like to reach me you can do so at my ${username} or ${email}
 
 `;
-
-fs.writeFile('README.md', readMeData, (err) => 
+// WRITE INFORMATION TO A FILE
+fs.writeFile(filename, readMeResponses, (err) => 
 err ? console.log(err) : console.log('README.md file created'))
 })
 
 .catch , (err) => 
 err ? console.error(err) : console.log('README.md file created')
 
-
-
-
-
-
-
+let filename = 'README.md'
