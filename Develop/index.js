@@ -1,6 +1,7 @@
 // Packages needed for this application
 const inquirer = require('inquirer'); 
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // Prompt(questions, answers). 
 // Questions array containing question object
@@ -77,60 +78,25 @@ const promiseThatResolvesToResponses = inquirer.prompt([
     },
 ])
 
-promiseThatResolvesToResponses.then(({projectTitle, Description, Motivation, Purpose, Knowledge, Installation, Usage, License, Contributing, Tests, username, email}) => {
 
-// RESPONSE OBJECT
-let readMeResponses = 
-
-`# ${projectTitle}
-![license](https://img.shields.io/badge/License-${License}-blue.svg)
-
-
-## Description 
-${Description}
-${Motivation}
-${Purpose}
-${Knowledge}
-
-## Table of Contents 
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Tests](#tests)
-- [Questions](#questions)
-
-## Installation 
-${Installation}
-
-## Usage 
-${Usage}
-
-## License 
-${License}
-MIT - (https://opensource.org/licenses/MIT)
-GLPv3 - (https://www.gnu.org/licenses/gpl-3.0)
-ISC - (https://opensource.org/licenses/ISC)
-
-© Elise Harman 2021
-
-## Contributing 
-${Contributing}
-
-## Tests 
-${Tests}
-
-## Questions 
-If you have any questions and would like to reach me you can do so at my ${username} or ${email}
-
-`;
 // WRITE INFORMATION TO A FILE
-fs.writeFile(filename, readMeResponses, (err) => 
-err ? console.log(err) : console.log('README.md file created'))
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) => 
+    err ? console.log(err) : console.log('README.md file created')
+    );
+}
+
+let fileName = 'README.md';
+
+
+// TODO: Create a function to initialize app
+function init() {
+promiseThatResolvesToResponses.then((data) => {
+writeToFile(fileName, data)
 })
+} 
 
-.catch , (err) => 
-err ? console.error(err) : console.log('README.md file created')
+// Function call to initialize app
+init();
 
-let filename = 'README.md'
+
