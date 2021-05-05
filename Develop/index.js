@@ -78,7 +78,6 @@ const promiseThatResolvesToResponses = inquirer.prompt([
     },
 ])
 
-
 // WRITE INFORMATION TO A FILE
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => 
@@ -86,17 +85,17 @@ function writeToFile(fileName, data) {
     );
 }
 
-let fileName = 'README.md';
-
+const fileName = 'README.md';
 
 // TODO: Create a function to initialize app
 function init() {
 promiseThatResolvesToResponses.then((data) => {
-writeToFile(fileName, data)
+let completedTemplate = generateMarkdown(data);
+writeToFile(fileName, completedTemplate)
+
+// Do something with generateMarkdown.js
 })
 } 
 
 // Function call to initialize app
 init();
-
-

@@ -1,14 +1,26 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
-
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  // MIT - (https://opensource.org/licenses/MIT)
+  // GLPv3 - (https://www.gnu.org/licenses/gpl-3.0)
+  // ISC - (https://opensource.org/licenses/ISC)
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+// switch statement 
+// value you want to test against each case 
+// testing for string
+
+switch (license) {
+  case "MIT":  
+  return "https://opensource.org/licenses/MIT"
+  break;
+  case "GLPv3":
+    return "https://www.gnu.org/licenses/gpl-3.0"
+    break;
+  case "ISC":
+  return "https://opensource.org/licenses/ISC"
+  break;
+}
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -39,11 +51,7 @@ function generateMarkdown(data) {
   
   ## License 
   ${data.License}
-  MIT - (https://opensource.org/licenses/MIT)
-  GLPv3 - (https://www.gnu.org/licenses/gpl-3.0)
-  ISC - (https://opensource.org/licenses/ISC)
-  
-  © Elise Harman 2021
+  ${renderLicenseLink(data.License)}
   
   ## Contributing 
   ${data.Contributing}
@@ -52,7 +60,7 @@ function generateMarkdown(data) {
   ${data.Tests}
   
   ## Questions 
-  If you have any questions and would like to reach me you can do so at my ${data.username} or ${data.email}
+  If you have any questions or would like to report and issue please contact me at my ${data.username} or ${data.email}
   
   `;
 }
