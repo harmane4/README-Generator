@@ -1,12 +1,11 @@
-# testy
-  ![license](https://img.shields.io/badge/License-MIT-blue.svg)
-  
+# 
+  ![license](https://img.shields.io/badge/License-GLPv3-blue.svg)
   
   ## Description 
-  test
-  test
-  tets
-  123
+  
+  
+  
+  
   
   ## Table of Contents 
   
@@ -18,21 +17,22 @@
   - [Questions](#questions)
   
   ## Installation 
-  test
+  
   
   ## Usage 
-  test
+  
   
   ## License 
-  MIT
+  GLPv3
+  https://www.gnu.org/licenses/gpl-3.0
   
   ## Contributing 
-  test
+  
   
   ## Tests 
-  test
+  
   
   ## Questions 
-  If you have any questions or would like to report and issue please contact me at my test or test
+  If you have any questions or would like to report and issue please contact me at my  or 
   
   

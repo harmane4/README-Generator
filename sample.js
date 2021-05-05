@@ -1,7 +1,7 @@
 // Packages needed for this application
 const inquirer = require('inquirer'); 
 const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown.js');
+const generateMarkdown = require('./Develop/utils/generateMarkdown.js');
 
 // Prompt(questions, answers). 
 // Questions array containing question object
@@ -85,7 +85,7 @@ function writeToFile(fileName, data) {
     );
 }
 
-const fileName = 'README.md';
+const fileName = 'sampleREADME.md';
 
 // TODO: Create a function to initialize app
 function init() {
