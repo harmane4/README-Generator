@@ -12,6 +12,11 @@ const promiseThatResolvesToResponses = inquirer.prompt([
         name: 'projectTitle' ,
         message: "What is the title of your project?" ,
     },
+    {
+        type: 'input' ,
+        name: 'fullName' ,
+        message: "What is your first and last name?" ,
+    },
     // DESCRIPTION
     {
         type: 'input' ,
