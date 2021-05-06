@@ -2,7 +2,7 @@
   ![license](https://img.shields.io/badge/License-MIT-blue.svg)
   
   ## Description 
-  This command-line application dynamically creates a professional README.md file from a user’s input using the Inquirer package.  The motivation for building this application was to bring consistency to the README.md file’s for applications.  The purpose is to reduce the amount of time spent creating a README.md so project creators can devote more time to working on a project. 
+  This command-line application dynamically creates a professional README.md file from a user’s input using the Inquirer package.  The motivation for building this application was to bring consistency to README.md file’s for applications.  The purpose is to reduce the amount of time spent creating a README.md so project creators can devote more time to working on a project. 
   
   ## Table of Contents 
   
