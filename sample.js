@@ -33,11 +33,6 @@ const promiseThatResolvesToResponses = inquirer.prompt([
         name: 'Purpose' , 
         message: 'Describe why you built the project:' ,
     },
-    {
-        type: 'input' ,
-        name: 'Knowledge' , 
-        message: 'Describe what you learn whilst building the project:' ,
-    },
     
       // INSTALLATION
     { 

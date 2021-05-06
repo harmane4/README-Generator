@@ -43,7 +43,6 @@ function generateMarkdown(data) {
   ${data.Description}
   ${data.Motivation}
   ${data.Purpose}
-  ${data.Knowledge}
   
   ## Table of Contents 
   
@@ -63,8 +62,6 @@ function generateMarkdown(data) {
   ## License 
   ${renderLicenseLink(data.License)}
   ${renderLicenseSection(data.License)}
-
-  
   
   ## Contributing 
   ${data.Contributing}
