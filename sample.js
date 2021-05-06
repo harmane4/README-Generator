@@ -5,17 +5,12 @@ const generateMarkdown = require('./Develop/utils/generateMarkdown.js');
 
 // Prompt(questions, answers). 
 // Questions array containing question object
-const promiseThatResolvesToResponses = inquirer.prompt([
+const questionsAndAnswers = inquirer.prompt([
     // TITLE OF PROJECT
     {
         type: 'input' ,
         name: 'projectTitle' ,
         message: "What is the title of your project?" ,
-    },
-    {
-        type: 'input' ,
-        name: 'fullName' ,
-        message: "What is your first and last name?" ,
     },
     // DESCRIPTION
     {
@@ -89,7 +84,7 @@ const fileName = 'sampleREADME.md';
 
 // TODO: Create a function to initialize app
 function init() {
-promiseThatResolvesToResponses.then((data) => {
+questionsAndAnswers.then((data) => {
 let completedTemplate = generateMarkdown(data);
 writeToFile(fileName, completedTemplate)
 

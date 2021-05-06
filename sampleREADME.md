@@ -2,9 +2,9 @@
   ![license](https://img.shields.io/badge/License-MIT-blue.svg)
   
   ## Description 
-  This command-line application dynamically creates a professional README.md file from a user’s input using the Inquirer package.  
-  The motivation for building this application was to bring consistency to the README.md file’s for applications.  
-  The purpose is to reduce the amount of time spent creating a README.md so project creators can devote more time to working on a project. 
+  This README.md was created using a command-line application.
+  Motivation for this project is to include what the application is for, how to use the application, how to install it, how to report issues and how to make contributions. 
+  Purpose of the application is to quickly generate a professional README.md
   
   ## Table of Contents 
   
@@ -16,24 +16,10 @@
   - [Questions](#questions)
   
   ## Installation 
-  To install this application first clone the repository from GitHub.
-  Ensure you have Node.JS AND Inquirer installed
-  In your terminal run the command `npm install`
-
+  Clone the repository from GitHub and in the terminal invoke the command `npm install`
   
   ## Usage 
-  Once all dependencies have been installed, navigate to the correct file in the command line and invoke the application by typing the `node index.js`. 
-
-  Enter answers to the prompts displayed in the terminal 
-
- ![Prompts](Develop/assets/images/prompts.png)
-
-  Once you have invoked the application enter answers to the prompts. If you make a mistake you can edit the file once it was been generated.
-
-  To view a walk-through of how to use the generator please refer to the [video demonstration](https://youtu.be/2tB63XJzE4I)
-
-  The final product should look like the below: 
-  ![Final Product](Develop/assets/images/sampleREADME.png)
+  To use this application clone the repository, and install dependencies (Inquirer)
   
   ## License 
   [MIT](https://choosealicense.com/licenses/mit/)
@@ -47,4 +33,5 @@
   
   ## Questions 
   If you have any questions or would like to report and issue please contact me at my [GitHub]( https://github.com/harmane4) or elise_harman@hotmail.com   
+  
   
