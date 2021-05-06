@@ -15,7 +15,7 @@
   
   ## Installation 
   To install this application first clone the repository from GitHub.
-  Ensure you have Node.JS AND Inquirer installed
+  Ensure you have Node.JS AND Inquirer installed.
   In your terminal run the command `npm install`
 
   
