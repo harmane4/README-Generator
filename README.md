@@ -2,9 +2,7 @@
   ![license](https://img.shields.io/badge/License-MIT-blue.svg)
   
   ## Description 
-  This command-line application dynamically creates a professional README.md file from a user’s input using the Inquirer package.  
-  The motivation for building this application was to bring consistency to the README.md file’s for applications.  
-  The purpose is to reduce the amount of time spent creating a README.md so project creators can devote more time to working on a project. 
+  This command-line application dynamically creates a professional README.md file from a user’s input using the Inquirer package.  The motivation for building this application was to bring consistency to the README.md file’s for applications.  The purpose is to reduce the amount of time spent creating a README.md so project creators can devote more time to working on a project. 
   
   ## Table of Contents 
   
@@ -24,11 +22,11 @@
   ## Usage 
   Once all dependencies have been installed, navigate to the correct file in the command line and invoke the application by typing the `node index.js`. 
 
-  Enter answers to the prompts displayed in the terminal 
+  Enter answers to the prompts displayed in the terminal, the first prompt is displayed below.
 
  ![Prompts](Develop/assets/images/prompts.png)
 
-  Once you have invoked the application enter answers to the prompts. If you make a mistake you can edit the file once it was been generated.
+ If you make a mistake you can edit the file once it was been generated.
 
   To view a walk-through of how to use the generator please refer to the [video demonstration](https://youtu.be/2tB63XJzE4I)
 
